@@ -1,0 +1,9 @@
+---
+title: "EDS212-Day2-Activity"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
