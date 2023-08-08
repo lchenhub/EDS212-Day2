@@ -108,27 +108,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ Setting active project to '/Users/lianechen/Documents/MEDS 2023/EDS
-212/EDS212-Day2/EDS212-Day2'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fx <span class="ot">=</span> <span class="fu">expression</span>(x <span class="sc">^</span> <span class="dv">2</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dfdx <span class="ot">=</span> <span class="fu">D</span>(fx, <span class="st">'x'</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">eval</span>(dfdx)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fx <span class="ot">=</span> <span class="fu">expression</span>(x <span class="sc">^</span> <span class="dv">2</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dfdx <span class="ot">=</span> <span class="fu">D</span>(fx, <span class="st">'x'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">eval</span>(dfdx)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Pa <span class="ot">=</span> <span class="fu">expression</span>((<span class="dv">2</span> <span class="sc">*</span> ((<span class="dv">3</span><span class="sc">*</span>a <span class="sc">+</span> <span class="dv">2</span>) <span class="sc">^</span> <span class="dv">4</span>)) <span class="sc">-</span> <span class="dv">5</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dPda <span class="ot">=</span> <span class="fu">D</span>(Pa, <span class="st">'a'</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fl">1.2</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">eval</span>(dPda)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Pa <span class="ot">=</span> <span class="fu">expression</span>((<span class="dv">2</span> <span class="sc">*</span> ((<span class="dv">3</span><span class="sc">*</span>a <span class="sc">+</span> <span class="dv">2</span>) <span class="sc">^</span> <span class="dv">4</span>)) <span class="sc">-</span> <span class="dv">5</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dPda <span class="ot">=</span> <span class="fu">D</span>(Pa, <span class="st">'a'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fl">1.2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">eval</span>(dPda)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4214.784</code></pre>
 </div>
