@@ -6,4 +6,19 @@ format: html
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
+usethis::use_git()
+```
+
+```{r}
+fx = expression(x ^ 2)
+dfdx = D(fx, 'x')
+x <- 3
+eval(dfdx)
+```
+
+```{r}
+Pa = expression((2 * ((3*a + 2) ^ 4)) - 5)
+dPda = D(Pa, 'a')
+a <- 1.2
+eval(dPda)
 ```
